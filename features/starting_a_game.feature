@@ -23,5 +23,10 @@ Feature: Starting the game
 		Given I fill in "name" with ""
 		Then I press "submit"
 		Then I should see "You didn't enter anything"
-		# Then I should see "You didn't enter anything"
 
+	Scenario: Registering another player
+
+		Scenario: When a second player's name is put in.
+
+		Given I have registered with Jerome Pratt
+		Given I click "Continue"

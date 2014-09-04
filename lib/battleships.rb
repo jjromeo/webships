@@ -2,13 +2,11 @@ require 'sinatra/base'
 
 class BattleShips < Sinatra::Base
   get '/' do
-     @linker = params[:link]
      @player = params[:name]
      erb :index
   end
 
   get '/create_new_user' do
-    @linker = params[:link]
     @player = params[:name]
     erb :create_new_user
   end
