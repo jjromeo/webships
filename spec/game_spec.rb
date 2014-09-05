@@ -4,7 +4,7 @@ require 'Board'
 describe Game do 
 	let(:ship) {double :ship }
 	let(:cell) { double :cell }
-	let(:game) {Game.new(10)} 
+	let(:game) {Game.new("Jerome", "Leo")} 
 	let(:player1) {double :player, name: "Player1", start_players_game: nil }
 	let(:player2) {double :player, name: "Player2", start_players_game: nil }
 	let(:board) {double :board}
