@@ -26,7 +26,4 @@ Feature: Starting the game
 
 	Scenario: Registering another player
 
-		Scenario: When a second player's name is put in.
 
-		Given I have registered with Jerome Pratt
-		Given I click "Continue"

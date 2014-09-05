@@ -1,19 +1,19 @@
-<%unless @player %>
+<%if @players == {} %>
 
 	<h1>Enter your name to play</h1>
-	<form>
+	<form method="POST">
 	<input type="text" name="name">
 	<input type="submit" value="submit">
 	</form>
 <%end%>
-	<%if@player == ""%>
+	<%if@players == ""%>
 	You didn't enter anything
 	<h1>Enter your name to play</h1>
 	<form>
 	<input type="text" name="name">
 	<input type="submit" value="submit">
 	</form>
-	<%elsif @player%>	
-		<h1>Welcome to the game <%=@player%></h1>
+	<%elsif !@players.count == 1%>	
+		<h1>Welcome to the game <%=@players[:player1]%></h1>
 		<h2><a href="/continue">Continue</a></h2>
 <%end%>
