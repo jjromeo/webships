@@ -13,6 +13,14 @@ describe Player do
 			expect(player.board.class).to eq Board
 		end
 
+		it "initializes with an array of ships" do
+			yellowsub = double :ship
+			destroyer = double :destroyer
+			patrol_boat = double :patrol_boat
+			aircraft_carrier = double :aircraft_carrier
+			expect(player.ships).to eq [yellowsub, yellowsub, destroyer, patrol_boat, aircraft_carrier]
+		end
+
 		it "Has a name" do
 			expect(player.name).to eq "Ben"  
 		end
