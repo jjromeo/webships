@@ -17,8 +17,8 @@ class BattleShips < Sinatra::Base
 
   post '/create_new_user' do
     @players = {}
-    @players[:player1] = Player.new(params[:name], 10)
-    @players[:player2] = Player.new(params[:name], 10)
+    @players[:player1] = (params[:name], 10)
+    @players[:player2] = (params[:name], 10)
     GAME.player1 = @players[:player1]
     GAME.player2 = @players[:player2]
     erb :create_new_user

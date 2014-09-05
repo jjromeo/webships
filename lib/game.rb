@@ -3,14 +3,20 @@ class Game
 attr_accessor  :player1, :player2
 
 
- 	def initialize(name1, name2)
-		@player1 = Player.new(name1,10)
-		@player1.join_game(self)
-		@player2 = Player.new(name1,10)
-		@player2.join_game(self)
+ 	def initialize
 		@ready = false
 	end
 
+	def add_player(name)
+		if !self.player1
+		@player1 = Player.new(name.to_s, 10)
+		@player1.join_game(self)
+		elsif !self.player2
+		@player2 = Player.new(name.to_s, 10)
+		@player2.join_game(self)
+		else raise "There are already 2 players registered"
+		end
+	end
 
 	def get_player_to_place_ship(player,ship)
 	    puts "#{player.name}, where would you lke to shoot?"
