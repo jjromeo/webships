@@ -14,10 +14,11 @@ describe Game do
 		allow(game).to receive(:get_user_y_coordinate).and_return(0) 
 	}
 
-	it "is initialised with two players" do 
+	it "can add players" do
+		game.add_player("Jerome", 10)
 		expect(game.player1).to be_an_instance_of Player
-		expect(game.player2).to be_an_instance_of Player
 	end
+
 	it "tell the players to join it once created" do 
 		expect(game.player1.game).to be_an_instance_of Game
 		expect(game.player2.game).to be_an_instance_of Game
